@@ -1,0 +1,411 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+/* ── Wrapper ── */
+.sl-wrapper {
+  display: flex;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+/* ════════════════════════════════
+   LEFT PANEL
+════════════════════════════════ */
+.sl-left {
+  flex: 0 0 46%;
+  background: #0f0f14;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 32px;
+  position: relative;
+  /* subtle noise texture */
+  background-image:
+    radial-gradient(ellipse at 20% 80%, rgba(139, 92, 246, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse at 85% 10%, rgba(99, 60, 220, 0.07) 0%, transparent 55%);
+}
+
+.sl-form-box {
+  width: 100%;
+  max-width: 380px;
+  animation: slFadeUp 500ms ease both;
+}
+
+/* Brand */
+.sl-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+
+.sl-brand-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #a855f7, #7c3aed);
+  box-shadow: 0 0 8px rgba(168, 85, 247, 0.7);
+}
+
+.sl-brand-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #e2e8f0;
+  letter-spacing: 0.6px;
+}
+
+/* Heading */
+.sl-heading {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #f1f5f9;
+  margin: 0 0 6px;
+  line-height: 1.15;
+}
+
+.sl-subheading {
+  font-size: 0.95rem;
+  color: #64748b;
+  margin: 0 0 32px;
+}
+
+/* Field rows */
+.sl-field-group {
+  margin-bottom: 20px;
+}
+
+.sl-label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #94a3b8;
+  margin-bottom: 8px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+.sl-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.sl-forgot {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0.82rem;
+  font-family: inherit;
+  font-weight: 500;
+  color: #a855f7;
+  cursor: pointer;
+  transition: color 160ms;
+}
+
+.sl-forgot:hover {
+  color: #c084fc;
+}
+
+/* Input wrapper */
+.sl-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.sl-icon {
+  position: absolute;
+  left: 14px;
+  width: 18px;
+  height: 18px;
+  color: #475569;
+  pointer-events: none;
+  flex-shrink: 0;
+}
+
+.sl-input {
+  width: 100%;
+  padding: 13px 44px 13px 42px;
+  background: #181824;
+  border: 1px solid #2a2a3a;
+  border-radius: 12px;
+  color: #e2e8f0;
+  font-family: inherit;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 200ms, box-shadow 200ms, background 200ms;
+}
+
+.sl-input::placeholder {
+  color: #3b4456;
+}
+
+.sl-input:focus {
+  border-color: #7c3aed;
+  background: #1e1b2e;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.18);
+}
+
+.sl-toggle-eye {
+  position: absolute;
+  right: 13px;
+  background: none;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  color: #475569;
+  display: flex;
+  align-items: center;
+  transition: color 160ms;
+}
+
+.sl-toggle-eye:hover {
+  color: #a855f7;
+}
+
+.sl-toggle-eye svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Login button */
+.sl-login-btn {
+  width: 100%;
+  padding: 14px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 12px;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  background: linear-gradient(135deg, #7c3aed 0%, #a855f7 60%, #c084fc 100%);
+  background-size: 200% 200%;
+  box-shadow: 0 6px 22px rgba(124, 58, 237, 0.45);
+  transition: transform 180ms ease, box-shadow 180ms ease, filter 180ms ease;
+  animation: slBtnPulse 3.5s ease-in-out infinite;
+}
+
+.sl-login-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(124, 58, 237, 0.6);
+  filter: brightness(1.08);
+}
+
+.sl-login-btn:active {
+  transform: translateY(0);
+}
+
+/* Sign up row */
+.sl-signup-text {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.88rem;
+  color: #64748b;
+}
+
+.sl-signup-link {
+  color: #a855f7;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 160ms;
+}
+
+.sl-signup-link:hover {
+  color: #c084fc;
+  text-decoration: underline;
+}
+
+/* ════════════════════════════════
+   RIGHT PANEL
+════════════════════════════════ */
+.sl-right {
+  flex: 1;
+  background: linear-gradient(145deg, #4c1d95 0%, #7c3aed 45%, #a855f7 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated orbs behind the card */
+.sl-right::before,
+.sl-right::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: slOrbDrift 14s ease-in-out infinite alternate;
+}
+
+.sl-right::before {
+  width: 340px;
+  height: 340px;
+  top: -80px;
+  right: -80px;
+  background: rgba(255, 255, 255, 0.07);
+  animation-duration: 14s;
+}
+
+.sl-right::after {
+  width: 260px;
+  height: 260px;
+  bottom: -60px;
+  left: -60px;
+  background: rgba(255, 255, 255, 0.06);
+  animation-duration: 17s;
+  animation-direction: alternate-reverse;
+}
+
+/* Card */
+.sl-right-card {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 28px;
+  backdrop-filter: blur(14px);
+  padding: 44px 36px 36px;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+  animation: slCardSlide 550ms ease both;
+}
+
+.sl-right-heading {
+  font-size: clamp(1.6rem, 2.5vw, 2rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.25;
+  margin: 0 0 10px;
+}
+
+.sl-right-sub {
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.65;
+  margin: 0 0 24px;
+}
+
+/* SVG illustration */
+.sl-illustration {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 12px;
+  margin-bottom: 24px;
+  animation: slIllFloat 5s ease-in-out infinite;
+}
+
+.sl-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Stats row */
+.sl-stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.sl-stat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.sl-stat-num {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1;
+}
+
+.sl-stat-label {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.65);
+  font-weight: 500;
+}
+
+.sl-stat-divider {
+  width: 1px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.25);
+  flex-shrink: 0;
+}
+
+/* ════════════════════════════════
+   KEYFRAMES
+════════════════════════════════ */
+@keyframes slFadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slCardSlide {
+  from { opacity: 0; transform: translateX(30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slBtnPulse {
+  0%, 100% { background-position: 0% 50%; }
+  50%       { background-position: 100% 50%; }
+}
+
+@keyframes slOrbDrift {
+  0%   { transform: translate(0, 0); }
+  100% { transform: translate(18px, 14px); }
+}
+
+@keyframes slIllFloat {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
+}
+
+/* ════════════════════════════════
+   RESPONSIVE
+════════════════════════════════ */
+@media (max-width: 900px) {
+  .sl-wrapper {
+    flex-direction: column-reverse;
+  }
+
+  .sl-left,
+  .sl-right {
+    flex: none;
+    width: 100%;
+    padding: 36px 20px;
+  }
+
+  .sl-right {
+    min-height: 340px;
+  }
+
+  .sl-form-box {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .sl-heading {
+    font-size: 1.9rem;
+  }
+
+  .sl-right-card {
+    padding: 28px 20px 24px;
+  }
+
+  .sl-right-heading {
+    font-size: 1.45rem;
+  }
+}

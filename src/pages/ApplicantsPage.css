@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+.applicants-page {
+  min-height: calc(100vh - 74px);
+  padding: 28px 0 40px;
+  background:
+    radial-gradient(circle at 8% 18%, rgba(125, 211, 252, 0.25), transparent 34%),
+    radial-gradient(circle at 92% 82%, rgba(139, 92, 246, 0.18), transparent 38%),
+    linear-gradient(135deg, #f6f9ff 0%, #edf3ff 45%, #f4f7ff 100%);
+  font-family: "Inter", sans-serif;
+}
+
+.applicants-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.applicants-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.applicants-title {
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0;
+}
+
+.applicants-subtitle {
+  color: #64748b;
+  margin: 4px 0 0;
+  font-size: 0.9rem;
+}
+
+.applicants-back-btn {
+  background: white;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 9px 18px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #475569;
+  cursor: pointer;
+  transition: all 0.18s;
+}
+
+.applicants-back-btn:hover {
+  background: #f1f5f9;
+  border-color: #c7d2dd;
+}
+
+.applicants-empty {
+  text-align: center;
+  color: #94a3b8;
+  font-size: 1rem;
+  padding: 60px 0;
+  font-style: italic;
+}
+
+.applicants-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.applicants-card {
+  background: white;
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  animation: cardRiseAppl 0.45s ease both;
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+
+.applicants-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.11);
+}
+
+@keyframes cardRiseAppl {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.applicants-card-top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.applicant-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7c3aed, #db2777);
+  color: white;
+  font-size: 1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.applicant-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.applicant-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.applicant-email {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin: 2px 0 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.appl-badge {
+  padding: 4px 11px;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.appl-badge-accepted { background: #dcfce7; color: #15803d; }
+.appl-badge-rejected { background: #fee2e2; color: #dc2626; }
+.appl-badge-pending  { background: #fef9c3; color: #a16207; }
+
+.applicant-detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 7px 0;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 0.84rem;
+}
+
+.applicant-detail-row:last-of-type {
+  border-bottom: none;
+}
+
+.applicant-detail-label { color: #94a3b8; font-weight: 500; }
+.applicant-detail-value { color: #334155; font-weight: 600; }
+
+.applicant-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.appl-action-btn {
+  flex: 1;
+  min-width: 80px;
+  padding: 8px 6px;
+  border: none;
+  border-radius: 9px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.18s;
+}
+
+.appl-btn-accept  { background: #dcfce7; color: #15803d; }
+.appl-btn-accept:hover:not(:disabled)  { background: #bbf7d0; }
+.appl-btn-accept:disabled { opacity: 0.45; cursor: not-allowed; }
+
+.appl-btn-reject  { background: #fee2e2; color: #dc2626; }
+.appl-btn-reject:hover:not(:disabled)  { background: #fecaca; }
+.appl-btn-reject:disabled { opacity: 0.45; cursor: not-allowed; }
+
+.appl-btn-resume  { background: #ede9fe; color: #7c3aed; }
+.appl-btn-resume:hover { background: #ddd6fe; }

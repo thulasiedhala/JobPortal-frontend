@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+.employer-dashboard-page {
+  min-height: calc(100vh - 74px);
+  padding: 20px 0 26px;
+  background:
+    radial-gradient(circle at 8% 18%, rgba(125, 211, 252, 0.25), transparent 34%),
+    radial-gradient(circle at 92% 82%, rgba(139, 92, 246, 0.18), transparent 38%),
+    linear-gradient(135deg, #f6f9ff 0%, #edf3ff 45%, #f4f7ff 100%);
+  font-family: "Inter", sans-serif;
+}
+
+.employer-dashboard-container {
+  position: relative;
+  z-index: 1;
+}
+
+.employer-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.employer-title {
+  margin: 0;
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.employer-subtitle {
+  margin: 6px 0 0;
+  color: #64748b;
+  font-size: 0.92rem;
+}
+
+.employer-post-btn {
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, #2563eb, #8b5cf6);
+  box-shadow: 0 12px 24px rgba(37, 99, 235, 0.25);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.employer-post-btn:hover {
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 16px 28px rgba(37, 99, 235, 0.32);
+}
+
+.employer-job-card {
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.86);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.1);
+  animation: employerCardIn 520ms ease both;
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.employer-job-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 22px 36px rgba(15, 23, 42, 0.14);
+}
+
+.employer-card-top {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 8px;
+}
+
+.employer-job-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #2563eb;
+  background: rgba(37, 99, 235, 0.1);
+  border-radius: 999px;
+  padding: 4px 10px;
+}
+
+.employer-job-title {
+  margin-bottom: 10px;
+  color: #0f172a;
+  font-size: 1.15rem;
+  font-weight: 800;
+}
+
+.employer-job-detail {
+  margin: 0 0 7px;
+  color: #334155;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.employer-salary {
+  margin-bottom: 12px;
+}
+
+.employer-actions {
+  flex-wrap: wrap;
+}
+
+.employer-action-btn {
+  border: none;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 8px 10px;
+  transition: transform 170ms ease, box-shadow 170ms ease;
+}
+
+.employer-action-btn:hover {
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.employer-action-applicants {
+  background: linear-gradient(135deg, #0ea5e9, #2563eb);
+}
+
+.employer-action-applicants:hover {
+  box-shadow: 0 10px 18px rgba(14, 165, 233, 0.32);
+}
+
+.employer-action-analytics {
+  background: linear-gradient(135deg, #f59e0b, #f97316);
+}
+
+.employer-action-analytics:hover {
+  box-shadow: 0 10px 18px rgba(245, 158, 11, 0.32);
+}
+
+.employer-action-delete {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.employer-action-delete:hover {
+  box-shadow: 0 10px 18px rgba(239, 68, 68, 0.32);
+}
+
+.employer-empty {
+  width: 100%;
+  border: 1px solid #dbe6fb;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 16px;
+  padding: 22px;
+  text-align: center;
+  color: #64748b;
+  font-weight: 600;
+}
+
+@keyframes employerCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .employer-topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .employer-title {
+    font-size: 1.5rem;
+  }
+}

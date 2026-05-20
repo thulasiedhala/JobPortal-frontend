@@ -1,0 +1,315 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+.student-portal-page {
+  min-height: calc(100vh - 74px);
+  padding: 24px;
+  background: #f5f7fc;
+  font-family: "Inter", sans-serif;
+}
+
+.student-portal-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 22px;
+}
+
+.jobs-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.filters-panel {
+  background: #fff;
+  border: 1px solid #eef1f8;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(16, 24, 40, 0.06);
+}
+
+.filters-title {
+  margin: 0 0 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.filter-group {
+  margin-bottom: 16px;
+}
+
+.filter-heading {
+  margin: 0 0 10px;
+  color: #334155;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.filter-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+  color: #475569;
+  font-size: 0.86rem;
+}
+
+.filter-item input {
+  width: 15px;
+  height: 15px;
+  accent-color: #8b5cf6;
+}
+
+.jobs-main {
+  background: #fff;
+  border: 1px solid #eef1f8;
+  border-radius: 22px;
+  box-shadow: 0 8px 24px rgba(16, 24, 40, 0.06);
+  padding: 22px;
+}
+
+.jobs-main-top {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 16px;
+}
+
+.jobs-heading-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.student-portal-title {
+  margin: 0;
+  color: #0f172a;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.jobs-count-badge {
+  background: #ede9fe;
+  color: #6d28d9;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.jobs-toolbar {
+  margin-bottom: 16px;
+}
+
+.jobs-search {
+  width: 100%;
+  border: 1px solid #e4e9f4;
+  border-radius: 12px;
+  padding: 11px 13px;
+  font-size: 0.9rem;
+  color: #0f172a;
+  background: #f8faff;
+  transition: border-color 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.jobs-search:focus {
+  outline: none;
+  border-color: #c4b5fd;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.14);
+  background: #fff;
+}
+
+.jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.student-job-card {
+  border-radius: 18px;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.student-job-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 30px rgba(15, 23, 42, 0.12);
+}
+
+.job-card-pastel-a { background: #fef3f2; }
+.job-card-pastel-b { background: #eef6ff; }
+.job-card-pastel-c { background: #f6f3ff; }
+.job-card-pastel-d { background: #f0fdf4; }
+.job-card-pastel-e { background: #fff7ed; }
+.job-card-pastel-f { background: #fdf2f8; }
+
+.job-card-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.date-badge {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.08);
+  color: #334155;
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+
+.bookmark-btn {
+  border: none;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.62);
+  transition: transform 160ms ease;
+}
+
+.bookmark-btn:hover {
+  transform: scale(1.06);
+}
+
+.company-name {
+  margin: 0;
+  font-size: 0.78rem;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.job-title {
+  margin: 4px 0 10px;
+  font-size: 1rem;
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.job-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-bottom: 10px;
+}
+
+.job-tag {
+  font-size: 0.72rem;
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: rgba(124, 58, 237, 0.12);
+  color: #6d28d9;
+  font-weight: 600;
+}
+
+.job-salary {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.job-location {
+  margin: 6px 0 14px;
+  color: #475569;
+  font-size: 0.84rem;
+}
+
+.job-details-box {
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 12px;
+  padding: 9px 10px;
+  margin-bottom: 10px;
+}
+
+.job-detail-line {
+  margin: 0;
+  color: #334155;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.job-resume-input {
+  margin-bottom: 10px;
+  width: 100%;
+  border: 1px solid #dbe2ef;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.75);
+  color: #1e293b;
+  padding: 7px 9px;
+}
+
+.apply-btn {
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  padding: 10px;
+  color: #fff;
+  font-size: 0.87rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #8b5cf6, #ec4899);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.apply-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(124, 58, 237, 0.25);
+}
+
+.apply-btn:disabled {
+  cursor: not-allowed;
+  background: linear-gradient(135deg, #94a3b8, #64748b);
+  box-shadow: none;
+  transform: none;
+}
+
+.empty-jobs {
+  grid-column: 1 / -1;
+  text-align: center;
+  border-radius: 16px;
+  padding: 24px;
+  background: #f8fafc;
+  color: #64748b;
+  font-weight: 600;
+}
+
+@media (max-width: 1200px) {
+  .jobs-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 980px) {
+  .student-portal-container {
+    grid-template-columns: 1fr;
+  }
+
+  .jobs-sidebar {
+    order: 2;
+  }
+}
+
+@media (max-width: 680px) {
+  .student-portal-page {
+    padding: 14px;
+  }
+
+  .jobs-main {
+    padding: 14px;
+  }
+
+  .jobs-main-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .jobs-grid {
+    grid-template-columns: 1fr;
+  }
+}

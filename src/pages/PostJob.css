@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+.postjob-page {
+  min-height: calc(100vh - 74px);
+  padding: 20px 0 30px;
+  background:
+    radial-gradient(circle at 10% 18%, rgba(59, 130, 246, 0.12), transparent 34%),
+    radial-gradient(circle at 88% 84%, rgba(236, 72, 153, 0.12), transparent 36%),
+    linear-gradient(135deg, #f6f9ff 0%, #edf2ff 45%, #f5f7ff 100%);
+  font-family: "Inter", sans-serif;
+}
+
+.postjob-container {
+  max-width: 980px;
+}
+
+.postjob-header {
+  margin-bottom: 16px;
+}
+
+.postjob-title {
+  margin: 0;
+  color: #0f172a;
+  font-size: 1.85rem;
+  font-weight: 800;
+}
+
+.postjob-subtitle {
+  margin: 6px 0 0;
+  color: #64748b;
+  font-size: 0.92rem;
+}
+
+.postjob-form-card {
+  background: rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 22px;
+  padding: 22px;
+  box-shadow: 0 16px 34px rgba(15, 23, 42, 0.12);
+  backdrop-filter: blur(10px);
+  animation: postJobFadeIn 420ms ease both;
+}
+
+.postjob-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.postjob-field-wide {
+  grid-column: 1 / -1;
+}
+
+.postjob-label {
+  display: block;
+  margin-bottom: 6px;
+  color: #334155;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.postjob-input {
+  border-radius: 12px;
+  border: 1px solid #dbe5f4;
+  background: #f8faff;
+  color: #0f172a;
+  transition: border-color 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+.postjob-input:focus {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 0.2rem rgba(139, 92, 246, 0.16);
+  background: #fff;
+}
+
+.postjob-textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.postjob-actions {
+  margin-top: 18px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.postjob-cancel-btn {
+  border-radius: 10px;
+  border: 1px solid #d6deee;
+  background: #fff;
+  color: #334155;
+  font-weight: 600;
+}
+
+.postjob-cancel-btn:hover {
+  background: #f8faff;
+}
+
+.postjob-submit-btn {
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 700;
+  background: linear-gradient(135deg, #2563eb, #8b5cf6);
+  box-shadow: 0 12px 22px rgba(37, 99, 235, 0.28);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.postjob-submit-btn:hover {
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 16px 26px rgba(37, 99, 235, 0.34);
+}
+
+@keyframes postJobFadeIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .postjob-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .postjob-actions {
+    justify-content: stretch;
+  }
+
+  .postjob-cancel-btn,
+  .postjob-submit-btn {
+    width: 100%;
+  }
+}
+
+/* Success state */
+.postjob-success-card {
+  background: white;
+  border-radius: 20px;
+  padding: 60px 40px;
+  text-align: center;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  max-width: 520px;
+  margin: 40px auto;
+  animation: postJobFadeIn 0.5s ease both;
+}
+
+.postjob-success-icon {
+  font-size: 3.2rem;
+  margin-bottom: 16px;
+}
+
+.postjob-success-title {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 10px;
+}
+
+.postjob-success-msg {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin-bottom: 32px;
+}
+
+.postjob-success-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
